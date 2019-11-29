@@ -1,6 +1,8 @@
 package Sah::Schema::cryptoexchange::account;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = [str => {
@@ -15,7 +17,7 @@ optional and will be assumed to be "/default" if not specified.
 
 _
     'x.completion' => 'cryptoexchange_account',
-    'x.perl.coerce_rules' => ['str_normalize_cryptoexchange_account'],
+    'x.perl.coerce_rules' => ['From_str::normalize_cryptoexchange_account'],
 }, {}];
 
 1;

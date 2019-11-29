@@ -1,6 +1,8 @@
 package Sah::Schemas::App::cryp;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 1;
