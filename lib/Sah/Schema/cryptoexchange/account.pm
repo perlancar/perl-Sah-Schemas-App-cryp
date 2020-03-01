@@ -18,6 +18,29 @@ optional and will be assumed to be "/default" if not specified.
 _
     'x.completion' => 'cryptoexchange_account',
     'x.perl.coerce_rules' => ['From_str::normalize_cryptoexchange_account'],
+    examples => [
+        {
+            summary => 'Invalid account syntax',
+            data    => 'indodax/a b',
+            valid   => 0,
+        },
+        {
+            summary => 'Account too long',
+            data    => 'indodax/'.('a' x 65),
+            valid   => 0,
+        },
+        {
+            summary => 'Unknown cryptoexchange',
+            data    => 'foo/acc1',
+            valid   => 0,
+        },
+        {
+            summary => 'Valid',
+            data    => 'indodax',
+            valid   => 1,
+            res     => 'indodax/default',
+        },
+    ],
 }, {}];
 
 1;
