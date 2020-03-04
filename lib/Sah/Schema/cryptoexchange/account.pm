@@ -21,22 +21,22 @@ _
     examples => [
         {
             summary => 'Invalid account syntax',
-            data    => 'indodax/a b',
+            value   => 'indodax/a b',
             valid   => 0,
         },
         {
             summary => 'Account too long',
-            data    => 'indodax/'.('a' x 65),
+            value   => 'indodax/'.('a' x 65),
             valid   => 0,
         },
         {
             summary => 'Unknown cryptoexchange',
-            data    => 'foo/acc1',
+            value   => 'foo/acc1',
             valid   => 0,
         },
         {
             summary => 'Valid',
-            data    => 'indodax',
+            value   => 'indodax',
             valid   => 1,
             res     => 'indodax/default',
         },
