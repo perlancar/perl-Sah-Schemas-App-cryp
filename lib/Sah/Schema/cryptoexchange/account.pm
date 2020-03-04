@@ -38,7 +38,7 @@ _
             summary => 'Valid',
             value   => 'indodax',
             valid   => 1,
-            res     => 'indodax/default',
+            validated_value => 'indodax/default',
         },
     ],
 }, {}];
